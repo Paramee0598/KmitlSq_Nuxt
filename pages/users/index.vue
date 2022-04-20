@@ -1,12 +1,13 @@
 
 
 <template>
-    <b-container>
+    <b-container fluid>
         <h2>HEY ฉันคือลูกของ User</h2>
         <headerSeller/>
         <VuetifyLogo/>
         <NuxtLogo/>
     </b-container>
+    
     
 </template>
 
