@@ -1,4 +1,4 @@
 <template>
-    <h2>Welcom : {{$route.params.name}}</h2>
+    <h2>Welcom : Who are {{$route.params.name}}</h2>
 </template>
 

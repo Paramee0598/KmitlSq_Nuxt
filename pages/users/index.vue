@@ -1,26 +1,34 @@
 
 
 <template>
-    <b-container fluid>
-        <h2>HEY ฉันคือลูกของ User</h2>
-        <headerSeller/>
-        <VuetifyLogo/>
-        <NuxtLogo/>
-    </b-container>
-    
-    
+  <b-container fluid>
+    <h2>HEY ฉันคือลูกของ User</h2>
+    <headerSeller />
+    <VuetifyLogo />
+    <NuxtLogo />
+    <nuxt-link :to="userLink" {{idUser}} >ชื่อไรนะ </nuxt-link >
+  </b-container>
 </template>
 
 <script>
-import headerSeller from '@/components/infoUsers/headerSeller'
+import headerTraders from "@/components/infoUsers/headerTraders";
 export default {
-    layout: "default",
-    components:{
-        headerSeller
-        
-
-    } 
-  
-    
-}
+  layout: "default",
+  components: {
+    headerTraders,
+  },
+  props: {
+    idUser: {
+      type: String,
+      required: false,
+    },
+  },
+  computed: {
+    userLink() {
+      return this.isUser
+        ? "/users/Traders/tradersPage"
+        : "/users/" + this.idUser;
+    },
+  },
+};
 </script>
