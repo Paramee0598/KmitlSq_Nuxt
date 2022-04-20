@@ -6,7 +6,7 @@
     <headerSeller />
     <VuetifyLogo />
     <NuxtLogo />
-    <nuxt-link :to="userLink" {{idUser}} >ชื่อไรนะ </nuxt-link >
+    <nuxt-link :to="userLink" >ชื่อไรนะ </nuxt-link >
   </b-container>
 </template>
 
